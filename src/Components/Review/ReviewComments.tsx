@@ -92,19 +92,19 @@ return(
   </section>
   <section className=" w-full lg:basis-16/20">
 <h2 className="font-semibold text-xl">Review Lists</h2>
-  <div className="flex gap-2 py-4 mb-5">
-<button className="rounded-lg px-5 py-2 border text-center bg-[#EBEBEB] font-medium text-[14px]">
+  <div className="flex gap-2 py-4 mb-5 flex-wrap">
+<button className="rounded-lg px-3 md:px-5 py-2 border text-center bg-[#EBEBEB] font-medium text-[14px]">
 All Reviews
 </button>
-<button className="rounded-lg px-5 py-2 border text-center font-medium text-[14px]">
+<button className="rounded-lg  px-3 md:px-5 py-2 border text-center font-medium text-[14px]">
 With Photo & Video
 </button>
-<button className="rounded-lg px-5 py-2 border text-center font-medium text-[14px]">
+<button className="rounded-lg  px-3 md:px-5 py-2 border text-center font-medium text-[14px]">
 With Description
 </button>
   </div>
   <div className="grid gap-6">
- <img src={ReviewImage1} alt="Review Image1" loading="lazy" className="object-cover w-max" />
+ <img src={ReviewImage1} alt="Review Image1" loading="lazy" className="object-cover" />
  <div className="border-[0.1px] border-zinc-300 border-spacing-2  border-dashed  my-4 w-full  px-0"></div>
 
  <img src={ReviewImage2} alt="Review Image1" loading="lazy" />

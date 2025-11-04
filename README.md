@@ -1,73 +1,113 @@
-# React + TypeScript + Vite
+# VFGL Frontend Test
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A frontend coding test project for VFGL. This repository contains a small single-page application that demonstrates UI implementation, component structure, state management.
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## React Compiler
+## Table of contents
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Project overview
+- Tech stack
+- Project goals & acceptance criteria
+- Prerequisites
+- Getting started
+- Available scripts
+- Troubleshooting
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Project overview
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+This repository is intended to be a focused frontend exercise. It should demonstrate clean code, accessible UI, responsive layout, and maintainable architecture. Typical deliverables include:
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+- Interactive UI matching provided design or wireframes
+- Component-driven structure with clear separation of concerns
+- State management (local state or chosen state library)
+- API integration (mocked or real)
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+I
+## Tech stack
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+- Framework: React (v18+) with TypeScript
+- Bundler / dev server: Vite (recommended) or Create React App
+- Styling:Tailwind CSS
+- State: React built-in state + Context or lightweight state library (optional)
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+-
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+
+
+## Project goals & acceptance criteria
+
+- UI implements the main screens and interactions described in the spec
+- Components are reusable and well-structured
+- Responsive and accessible (keyboard navigation, semantic HTML, alt text)
+- Error handling for network and edge cases
+- Tests cover core components and logic
+
+
+## Prerequisites
+
+- Node.js LTS (16+ recommended)
+- npm (8+) or Yarn / pnpm
+- Git
+
+## Getting started
+
+1. Clone the repo
+  git clone <repo-url>
+  cd vfgl-frontend-test
+
+2. Install dependencies
+  npm install
+  # or
+  yarn install
+  # or
+  pnpm install
+
+3. Start the dev server
+  npm run dev
+  # or
+  yarn dev
+
+Open http://localhost:5173 (Vite default) or the URL shown in your terminal.
+
+## Available scripts
+
+
+- npm run dev — start development server
+- npm run build — production build
+- npm run preview — preview production build locally
+- npm run test — run unit tests
+- npm run test:watch — run tests in watch mode
+- npm run lint — run ESLint
+- npm run format — run Prettier formatting
+- npm run typecheck — run TypeScript type check (if using TS)
+
+Example package.json scripts:
+{
+  "scripts": {
+   "dev": "vite",
+   "build": "vite build",
+   "preview": "vite preview --port 4173",
+   "test": "vitest",
+   "test:watch": "vitest watch",
+   "lint": "eslint --ext .ts,.tsx src",
+   "format": "prettier --write .",
+   "typecheck": "tsc --noEmit"
+  }
+}
+
+
+
+Deployment options:
+- Vercel, Netlify, 
+
+
+
+
+## Troubleshooting
+
+- Dev server not starting: ensure Node version matches requirements and dependencies installed.
+- Type errors: run npm run typecheck and fix TypeScript issues.
+- Tests failing: run individual tests in watch mode to inspect failures.
+

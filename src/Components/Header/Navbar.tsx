@@ -1,5 +1,5 @@
 
-import Image16 from "../../assets/images/image 16.png"
+import NavImage from "../../assets/images/image 16.png"
 import Search from "../../assets/images/Search.png"
 import CartIcon from "../../assets/images/Cart icon.png"
 import NavIcon from "../../assets/images/Nev.png"
@@ -10,7 +10,7 @@ export default function Navbar(){
         <>
          <nav className="navbar-sm flex flex-wrap align-middle justify-between m-10 ">
    
- <img src={Image16} alt="Nav Image" loading="lazy" />
+ <img src={NavImage} alt="Nav Image" loading="lazy" />
    
 
    <div className="gap-2 flex ">

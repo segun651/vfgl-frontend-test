@@ -5,15 +5,15 @@ export default function Pagination(){
     return(
         <div className="flex flex-wrap gap-4 my-10 ">
   <div className="flex gap-4 font-medium text-xs">
-    <li className="list-none">Homepage</li>
+    <li className="list-none text-[#8F8F8F]">Homepage</li>
     <img src={ArrowRight} alt="Arrow" loading="lazy" />
   </div>
   <div className="flex gap-4 font-medium text-xs">
-    <li className="list-none">Women</li>
+    <li className="list-none text-[#8F8F8F]">Women</li>
     <img src={ArrowRight} alt="Arrow" loading="lazy" />
   </div>
   <div className="flex gap-4 font-medium text-xs">
-    <li className="list-none">Women's Shirts & Tops</li>
+    <li className="list-none text-[#8F8F8F]">Women's Shirts & Tops</li>
     <img src={ArrowRight} alt="Arrow" loading="lazy" />
   </div>
   <div className="flex gap-4 font-medium text-xs">
